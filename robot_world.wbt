@@ -1,0 +1,30 @@
+#VRML_SIM R2023b utf8
+WorldInfo {
+  basicTimeStep 32
+  coordinateSystem "Y_UP"
+}
+Viewpoint {
+  orientation 0.0 1.0 0.0 0.5
+  position 0 2 5
+}
+TexturedBackground {}
+TexturedBackgroundLight {}
+Floor {
+  size 10 10
+}
+Robot {
+  translation 0 0.1 0
+  name "MyRobot"
+  controller "robot_controller"
+  children [
+    Camera {
+      name "camera"
+      width 64
+      height 64
+      position 0.0 0.5 0.1
+      orientation 1 0 0 0
+      near 0.01
+      far 5.0
+    }
+  ]
+}
